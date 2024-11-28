@@ -22,10 +22,10 @@ class RequestHandler(http.server.SimpleHTTPRequestHandler):
     def log_message(self, format, *args):
         pass
 
-parser = argparse.ArgumentParser(description="HTTP server and malicious file uploader.")
-parser.add_argument("url", help="Target URL (e.g., http://alert.htb)")
-parser.add_argument("file_path", help="File path to be included in the payload")
-parser.add_argument('-w', '--write', action='store_true', help='Optional argument for word')
+parser = argparse.ArgumentParser(description="XSS AUTOMATION")
+parser.add_argument("url", help="Target URL (like: http://alert.htb")
+parser.add_argument("file_path", help="File path that we want to read")
+parser.add_argument('-w', '--write', action='store_true', help='Save the file on your machine')
 args = parser.parse_args()
 
 url = args.url
